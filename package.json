@@ -1,18 +1,24 @@
 {
-  "name": "exam",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.24.0",
-  "dependencies": {
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "mongoose": "^9.2.1"
-  }
+	"name": "exam",
+	"version": "1.0.0",
+	"description": "",
+	"main": ".src/server.js",
+	"type": "module",
+	"scripts": {
+		"start": "node ./src/server.js",
+		"dev": "nodemon ./src/server.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.24.0",
+	"dependencies": {
+		"dotenv": "^17.3.1",
+		"express": "^5.2.1",
+		"express-validator": "^7.3.1",
+		"mongoose": "^9.2.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.13"
+	}
 }
