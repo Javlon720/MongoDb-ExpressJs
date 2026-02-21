@@ -1,0 +1,85 @@
+@baseUrl = http://localhost:3004/api
+
+### 1. COURSES
+# @name createCourse
+POST {{baseUrl}}/course
+Content-Type: application/json
+
+{
+  "title": "Node.js Backend Development",
+  "price": 500,
+  "duration": 3
+}
+
+###
+GET {{baseUrl}}/course
+
+###
+# @id = replace_with_id
+GET {{baseUrl}}/course/65d5ef7a123bc4567890def1
+
+###
+
+### 2. TEACHERS
+# @name createTeacher
+POST {{baseUrl}}/teacher
+Content-Type: application/json
+
+{
+  "fullName": "John Doe",
+  "phone": "+998901234567",
+  "specialty": "IT engineer"
+}
+
+###
+GET {{baseUrl}}/teacher
+
+###
+
+### 3. GROUPS
+# @name createGroup
+POST {{baseUrl}}/group
+Content-Type: application/json
+
+{
+  "name": "Node-001",
+  "startDate": "2024-03-01",
+  "course": "65d5ef7a123bc4567890def1",
+  "teacher": "65d5ef7a123bc4567890def2"
+}
+
+###
+GET {{baseUrl}}/group
+
+###
+
+### 4. STUDENTS
+# @name createStudent
+POST {{baseUrl}}/student
+Content-Type: application/json
+
+{
+  "fullName": "Ali Valiyev",
+  "phone": "+998991234567",
+  "age": 20,
+  "group": "65d5ef7a123bc4567890def3"
+}
+
+###
+GET {{baseUrl}}/student
+
+###
+
+### 5. PAYMENTS
+# @name createPayment
+POST {{baseUrl}}/payment
+Content-Type: application/json
+
+{
+  "amount": 500,
+  "paymentMethod": "click",
+  "student": "65d5ef7a123bc4567890def4"
+}
+
+###
+GET {{baseUrl}}/payment

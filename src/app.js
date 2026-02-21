@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(loggerMiddleware);
 
-routeLoader(app);
+await routeLoader(app);
 
 app.use(notFoundMiddleware);
 
